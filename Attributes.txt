@@ -791,6 +791,25 @@ plt.ylabel("Number of Passengers")
 plt.title("Distribution of Ticket Fare in Titanic Dataset")
 plt.show()
 
+Q17
+# Confusion matrix values
+TP = 1
+FP = 1
+FN = 8
+TN = 90
+
+# Formulas
+accuracy = (TP + TN) / (TP + TN + FP + FN)
+error_rate = (FP + FN) / (TP + TN + FP + FN)
+precision = TP / (TP + FP)
+recall = TP / (TP + FN)
+
+# Print results
+print("Accuracy:", accuracy)
+print("Error Rate:", error_rate)
+print("Precision:", precision)
+print("Recall:", recall)
+
 
 Q18
 import pandas as pd
@@ -1039,6 +1058,25 @@ print("\nFinal cluster means after", NUM_ITERS, "iterations:")
 for i, m in enumerate(means):
     print(f"  Cluster {i}: {np.round(m,6)}")
 
+Q22
+
+# Confusion matrix values
+TP = 90
+FP = 140
+FN = 210
+TN = 9560
+
+# Formulas
+accuracy = (TP + TN) / (TP + TN + FP + FN)
+error_rate = (FP + FN) / (TP + TN + FP + FN)
+precision = TP / (TP + FP)
+recall = TP / (TP + FN)
+
+# Print results
+print("Accuracy:", accuracy)
+print("Error Rate:", error_rate)
+print("Precision:", precision)
+print("Recall:", recall)
 
 Q23
 
@@ -1169,3 +1207,4 @@ for col in ["Age", "Income", "Gender", "Ms", "Buys"]:
         df[col + "_code"] = df[col].astype("category").cat.codes
 
 print("\nCleaned & Transformed Data:\n", df.head())
+
